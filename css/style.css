@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* background: var(--CL-Green, #2ec4b6); */
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: hidden;
+  height: 100vh;
+  padding: 40px 100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
+.content img {
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+}
+
+.content h1 {
+  color: var(--CL-Black, #000b0a);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.8px;
+}
+
+.content h6 {
+  color: var(--CL-Grey, #737373);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  width: 82%;
+  margin-top: 1rem;
+}
+
+.content h6.large-screen {
+  width: 82%;
+}
+
+.content h6.small-screen {
+  font-weight: 300;
+  display: none;
+}
+
+.form {
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+  padding: 30px 40px;
+  width: 100%;
+}
+
+.form .grid {
+  gap: 20px;
+}
+
+label {
+  color: var(--Text-Headings, #011c34);
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.1px;
+}
+
+.form input,
+.form select {
+  border: 1.5px solid #f0f0f0;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  color: var(--CL-Grey, #737373);
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin-top: 0.5rem;
+}
+
+.form input:focus,
+.form select:focus {
+  outline: none;
+  border-color: #2ec4b6;
+}
+
+.form-group.password {
+  margin-top: 1rem;
+}
+
+.eye {
+  position: absolute;
+  bottom: 26%;
+  left: 87%;
+}
+
+.form-group button {
+  width: 100%;
+  color: #fff;
+  background-color: #2ec4b6;
+  border: 1px solid #2ec4b6;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 1rem;
+  font-family: "Sofia Sans";
+}
+
+.form h6 {
+  color: #000;
+  font-family: "Sofia Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.form h6 strong {
+  color: var(--CL-Green, #2ec4b6);
+  font-weight: 500;
+  text-decoration-line: underline;
+}
+
+/* Tablets and under */
+@media all and (max-width: 768px) {
+  .container {
+    padding: 40px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .content h6.large-screen {
+    width: 100%;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .eye {
+    bottom: 31.5%;
+    left: 89%;
+  }
+}
+
+/* Mobile */
+@media all and (max-width: 500px) {
+  .container {
+    padding: 30px;
+    overflow: auto;
+    height: auto;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content h6 {
+    font-size: 13px;
+    margin-top: 0;
+    color: var(--CL-Grey, #737373);
+  }
+
+  img {
+    width: 20%;
+  }
+
+  .content h6.large-screen {
+    display: none;
+  }
+
+  .content h6.small-screen {
+    display: block;
+    width: 100%;
+    font-weight: 0;
+  }
+
+  .form {
+    margin-top: 1.5rem;
+  }
+
+  .eye {
+    width: 3%;
+    bottom: -69%;
+    left: 84%;
+  }
+}
+
+/* Mobile */
+@media all and (max-width: 400px) {
+  .eye {
+    width: 3.5%;
+    bottom: -67%;
+    left: 82%;
+  }
+}
+
+/* Mobile */
+@media all and (max-width: 320px) {
+  .eye {
+    width: 4%;
+    bottom: -65%;
+    left: 79%;
+  }
+}
